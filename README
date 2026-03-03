@@ -1,0 +1,23 @@
+# CatScope (SBA 308A)
+
+A single-page JavaScript web app that browses cat images using The Cat API.
+
+## Features
+- Fetches data from an external API using `fetch` + async/await
+- Browse a paginated gallery of cats (GET)
+- Filter by breed (GET)
+- Save favorites (POST) and remove favorites (DELETE)
+- Submit votes (POST)
+- JavaScript organized into modules (`api.js`, `state.js`, `ui.js`, `main.js`)
+- Basic event-loop safety: ignores stale API responses using a request id
+
+## How to Run
+1. Clone the repo
+2. Open `index.html` with a local server (recommended):
+   - VS Code: “Live Server”
+   - Or: `python -m http.server` then open the provided localhost URL
+
+## API Key
+This app uses The Cat API. Add your API key in `js/api.js`:
+```js
+const API_KEY = "YOUR_KEY_HERE";

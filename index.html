@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CatScope — Cat Browser</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container">
+    <div class="brand">
+      <h1>CatScope</h1>
+      <p class="muted">Browse cats, filter by breed, and save favorites.</p>
+    </div>
+
+    <div class="controls">
+      <label class="field">
+        <span>Breed</span>
+        <select id="breedSelect">
+          <option value="">All breeds</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span>Limit</span>
+        <select id="limitSelect">
+          <option value="9">9</option>
+          <option value="12" selected>12</option>
+          <option value="18">18</option>
+        </select>
+      </label>
+
+      <button id="refreshBtn" class="btn">Refresh</button>
+    </div>
+
+    <div class="bar">
+      <div class="pager">
+        <button id="prevBtn" class="btn btn-ghost" disabled>← Prev</button>
+        <span id="pageLabel" class="pill">Page 1</span>
+        <button id="nextBtn" class="btn btn-ghost">Next →</button>
+      </div>
+
+      <div class="right">
+        <button id="viewFavoritesBtn" class="btn btn-ghost">View Favorites</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="status" class="status hidden"></section>
+    <section id="grid" class="grid"></section>
+  </main>
+
+  <footer class="container footer">
+    <small class="muted">
+      Built for SBA 308A — fetch/async-await/modules/pagination/POST.
+    </small>
+  </footer>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
