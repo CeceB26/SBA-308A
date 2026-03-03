@@ -20,4 +20,3 @@ A single-page JavaScript web app that browses cat images using The Cat API.
 ## API Key
 This app uses The Cat API. Add your API key in `js/api.js`:
 ```js
-const API_KEY = "YOUR_KEY_HERE";
